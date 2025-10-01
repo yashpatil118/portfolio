@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Patil - DevOps Engineer & Cybersecurity Specialist</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Yash Patil</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Yash Patil</span>
+                </h1>
+                <p class="hero-subtitle">
+                    DevOps Engineer & Cybersecurity Specialist
+                </p>
+                <p class="hero-description">
+                    Final-year B.Tech Computer Engineering student with hands-on experience in IT support, 
+                    networking, and cloud security. Skilled in infrastructure automation, CI/CD pipelines, 
+                    and building secure, scalable systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-section">
+                    <div class="profile-photo">
+                        <div class="photo-placeholder">
+                            <!-- <i class="fas fa-user"></i> -->
+                            <img src="assets/pof1.png" alt="Yash Patil" class="photo-placeholder" object-fit:cover;>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <span class="terminal-title">yash@portfolio:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-output" id="terminalOutput">
+                            <div class="terminal-line welcome">
+                                <span class="welcome-text">Welcome to Yash Patil's Portfolio Terminal!</span>
+                            </div>
+                            <div class="terminal-line welcome">
+                                <span class="welcome-text">Type 'help' to see available commands</span>
+                            </div>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="prompt">yash@portfolio:~$</span>
+                            <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false">
+                            <span class="cursor">|</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a final-year B.Tech Computer Engineering student at JSPM's RSCOE with hands-on experience in 
+                        IT support, networking, and cloud security. My expertise spans <strong>DevOps automation</strong>, 
+                        <strong>Cybersecurity</strong>, and <strong>Infrastructure as Code</strong>. I specialize in building 
+                        secure, scalable systems with certifications in Cloud, Networking, and Cybersecurity.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Academic Excellence</h4>
+                                <p>CGPA: 8.69/10, Published IEEE research paper on AI</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Leadership</h4>
+                                <p>Vice President - Coding Club, Administration Head - ACM</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Achievements</h4>
+                                <p>SBI CYI Hackathon Semifinalist (Top 1000/50k+ entries)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>8.69</h3>
+                        <p>CGPA</p>
+                    </div>
+                    <div class="stat">
+                        <h3>6+</h3>
+                        <p>Certifications</p>
+                    </div>
+                    <div class="stat">
+                        <h3>400+</h3>
+                        <p>Peers Led</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Leadership</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>App Developer Intern</h3>
+                            <span class="company">Bharat-Intern, Pune</span>
+                            <span class="duration">June 2023 – Aug 2023</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Developed Android applications using Java and Kotlin in Android Studio</li>
+                            <li>Created unit converter app implementing activity lifecycle and system configuration</li>
+                            <li>Gained hands-on experience in mobile development and UI/UX design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Vice President - Coding Club RSCOE</h3>
+                            <span class="company">Student Leadership Role</span>
+                            <span class="duration">2023 – Present</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Led GitHub sessions and Cybersecurity workshops for 400+ peers</li>
+                            <li>Organized hackathons and fostered inclusive learning community</li>
+                            <li>Mentored students in programming and DevOps practices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Administration Head - ACM RSCOE Student Chapter</h3>
+                            <span class="company">Professional Organization</span>
+                            <span class="duration">2023 – Present</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Managed administrative operations for ACM student chapter</li>
+                            <li>Coordinated technical events and workshops</li>
+                            <li>Organized 24-hour hackathon (Avinya 2.0) as Secretary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Tech Stack & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming & Scripting</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">PowerShell</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Cybersecurity & Networking</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">DHCP</span>
+                        <span class="skill-tag">DNS</span>
+                        <span class="skill-tag">VPN</span>
+                        <span class="skill-tag">Firewall</span>
+                        <span class="skill-tag">Patch Management</span>
+                        <span class="skill-tag">Cryptography</span>
+                        <span class="skill-tag">Cisco Packet Tracer</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">OCI</span>
+                        <span class="skill-tag">Cloud Security</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                        <span class="skill-tag">Infrastructure as Code</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Monitoring & Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">Node Exporter</span>
+                        <span class="skill-tag">System Monitoring</span>
+                        <span class="skill-tag">Network Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frameworks & Methodologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">MERN Stack</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Allergen Detection System</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/yashpatil118/Allergen-Detection-System" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A machine learning system to predict allergies and suggest correct diet plans. 
+                        Built with TypeScript, this system helps users make informed dietary choices.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Healthcare</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Banking Application</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/yashpatil118/Banking_Application---SpringBoot" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A comprehensive banking application built with Spring Boot, featuring secure 
+                        transactions, user management, and robust financial operations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SecureChat - Real-Time Messaging</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/yashpatil118/SecureChat" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Built a real-time chat application deployed on GCP using MERN stack, Docker, and Jenkins. 
+                        Implemented JWT authentication, liveness probes, and automated CI/CD pipelines for reliability.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MERN Stack</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">JWT</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>PENTEST-MCP-SERVER</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/yashpatil118/PENTEST-MCP-SERVER" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        An MCP server designed for penetration testing, providing automated tools 
+                        and frameworks for ethical hacking and vulnerability assessment.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Penetration Testing</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Monitoring Stack</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Built system/network monitoring dashboards with CPU/memory alerts using Prometheus, Grafana, and Wireshark. 
+                        Analyzed DNS/DHCP traffic and documented troubleshooting logs for network optimization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">Network Analysis</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>CI/CD Pipeline for Microservices</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/yashp23dev/Jenkins" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Created automated pipelines for software updates, rollback, and patching using Jenkins and Spring Boot. 
+                        Conducted system configuration, security scans, and troubleshooting during deployments.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AWS Infrastructure Automation</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/yashp23dev/Terraform" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Automated VPC, IP addressing, and firewall security groups with Terraform on AWS. 
+                        Deployed VPN access and patch management scripts to maintain compliance and security standards.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">VPC</span>
+                        <span class="tech-tag">Infrastructure as Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Education</h2>
+            <div class="certifications-grid">
+                <div class="cert-category">
+                    <h3><i class="fas fa-certificate"></i> Professional Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item" onclick="window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=086A81292E1ED81EA3E30A644715626C974483A7746115DF76FB6454CB1EA4C7', '_blank', 'noopener,noreferrer')">
+                            <span class="cert-name">Oracle Cloud Infrastructure 2025 Certified - DevOps Professional</span>
+                            <span class="cert-date">Sept 2025</span>
+                        </div>
+                        <div class="cert-item" onclick="window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=ED8D9E261A49D4915E6EE907DD37D38CE85C03E07CDC07DB5EA2FF854EA3', '_blank')">
+                            <span class="cert-name">Oracle Cloud Infrastructure 2025 Certified - Networking Professional</span>
+                            <span class="cert-date">Sept 2025</span>
+                        </div>
+                        <div class="cert-item" onclick="window.open('https://www.credly.com/badges/4829c629-d19a-4145-9c60-6575c8056fce/public_url', '_blank')">
+                            <span class="cert-name">Google Cloud Computing Foundations Certificate</span>
+                            <span class="cert-date">2025</span>
+                        </div>
+                        <div class="cert-item" onclick="window.open('https://www.credly.com/badges/36021dd6-1489-42a2-9cc7-7c564f306613/linked_in_profile', '_blank')">
+                            <span class="cert-name">AWS Academy Graduate - Cloud Foundations Training Badge</span>
+                            <span class="cert-date">2025</span>
+                        </div>
+                        <div class="cert-item" onclick="window.open('https://www.credly.com/badges/781a74f5-e19e-414c-918f-73ddd5be548e/linked_in_profile', '_blank')">
+                            <span class="cert-name">Introduction to Cybersecurity - Cisco</span>
+                            <span class="cert-date">2025</span>
+                        </div>
+                        <div class="cert-item" onclick="window.open('https://www.credly.com/badges/e3af333f-eb2e-4c88-8c79-3e6ed4f3545f', '_blank')">
+                            <span class="cert-name">Cybersecurity Roles, Processes & Operating System Security</span>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-category">
+                    <h3><i class="fas fa-trophy"></i> Competitions & Achievements</h3>
+                    <div class="competitions-list">
+                        <div class="competition-item">
+                            <span class="competition-name">SBI CYI Hackathon - Semifinalist</span>
+                            <span class="achievement">Top 1000/50k+ entries</span>
+                        </div>
+                        <div class="competition-item">
+                            <span class="competition-name">Avinya 2.0 - 24-hour Hackathon</span>
+                            <span class="achievement">Secretary & Organizer</span>
+                        </div>
+                        <div class="competition-item">
+                            <span class="competition-name">Coding Club RSCOE</span>
+                            <span class="achievement">Vice President - 400+ peers</span>
+                        </div>
+                        <div class="competition-item">
+                            <span class="competition-name">ACM RSCOE Student Chapter</span>
+                            <span class="achievement">Administration Head</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-category">
+                    <h3><i class="fas fa-file-alt"></i> Publications</h3>
+                    <div class="publication-item" onclick="window.open('https://ieeexplore.ieee.org/document/10914815', '_blank')">
+                        <h4>Optimizing Human-AI Interaction: Innovations in Prompt Engineering</h4>
+                        <p class="journal">IEEE</p>
+                        <p class="doi">DOI: 10.1109/IDCIOT64235.2025.10914815</p>
+                        <p class="date">March 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to discuss security and automation?</h3>
+                    <p>
+                        I'm always interested in discussing cybersecurity, DevOps automation, 
+                        and building secure systems. Let's connect and explore opportunities!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://github.com/yashpatil118" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yash-patil-069820252" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:yashppatilk23@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="tel:+917218704350" class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="quote-section">
+                    <blockquote>
+                        "Security is not a product, it's a process." 
+                        <cite>â€“ Bruce Schneier</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Yash Patil. Building secure systems, one commit at a time.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <div class="fab-main">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
