@@ -256,7 +256,12 @@ function addTerminalOutput(text, type = 'command-output') {
     const terminalOutput = document.getElementById('terminalOutput');
     const line = document.createElement('div');
     line.className = `terminal-line ${type}`;
-    line.textContent = text;
+    // If text contains box-drawing characters, use <pre> for formatting
+    if (typeof text === 'string' && /[╭╮╰╯│─┬┌┐└┘]/.test(text)) {
+        line.innerHTML = `<pre style="margin:0;">${text}</pre>`;
+    } else {
+        line.textContent = text;
+    }
     terminalOutput.appendChild(line);
     terminalOutput.scrollTop = terminalOutput.scrollHeight;
 }
