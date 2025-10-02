@@ -124,8 +124,6 @@ const terminalCommands = {
             'date          - Show current date/time',
             'uptime        - Show portfolio uptime',
             'matrix        - Matrix reference',
-            'ls            - List directory contents',
-            'pwd           - Print working directory',
             'clear         - Clear terminal',
             'help          - Show this help message',
             '─────────────────────────────────────',
@@ -210,22 +208,6 @@ const terminalCommands = {
         type: 'success',
         action: () => window.open('https://linkedin.com/in/yash-patil-069820252', '_blank', 'noopener,noreferrer')
     },
-    'ls': {
-        output: [
-            'about.txt',
-            'certifications.txt',
-            'projects/',
-            'skills.txt',
-            'experience.txt',
-            'contact.txt',
-            'resume.pdf'
-        ],
-        type: 'success'
-    },
-    'pwd': {
-        output: ['/home/yash/portfolio'],
-        type: 'success'
-    },
     'clear': {
         output: [],
         type: 'clear'
@@ -242,9 +224,9 @@ const terminalCommands = {
         output: [
             '╭─────────────────────────────────────╮',
             '│                                     │',
-            '│  ╭─╮┬ ┬┌┐┌  ┬┌─┐┌┐┌┌─┐┌─┐┬┌─┐┌┐┌  │',
-            '│  │ ││ │││││  │├─┘│││├─┤│  ││ ││││  │',
-            '│  └─┘└─┘┘└┘└─┘┴└─┘┘└┘┴ ┴└─┘┴└─┘┘└┘  │',
+            '│  ╭─╮┬ ┬┌┐┌  ┬┌─┐┌┐┌┌─┐┌─┐┬┌─┐┌┐┌    │',
+            '│  │ ││ │││││  │├─┘│││├─┤│  ││ ││││   │',
+            '│  └─┘└─┘┘└┘└─┘┴└─┘┘└┘┴ ┴└─┘┴└─┘┘└┘   │',
             '│                                     │',
             '│  DevOps Engineer & Cybersecurity    │',
             '│  Specialist                         │',
