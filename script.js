@@ -96,7 +96,7 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     if (hero) {
-        hero.style.transform = 	ranslateY(px);
+        hero.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
 });
 
@@ -459,12 +459,11 @@ document.querySelectorAll('.btn').forEach(button => {
 
 // Add CSS for ripple effect
 const style = document.createElement('style');
-style.textContent = 
+style.textContent = `
     .btn {
         position: relative;
         overflow: hidden;
     }
-    
     .ripple {
         position: absolute;
         border-radius: 50%;
@@ -473,12 +472,11 @@ style.textContent =
         animation: ripple-animation 0.6s linear;
         pointer-events: none;
     }
-    
     @keyframes ripple-animation {
         to {
             transform: scale(4);
             opacity: 0;
         }
     }
-;
+`;
 document.head.appendChild(style);
