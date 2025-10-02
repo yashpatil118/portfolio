@@ -346,6 +346,18 @@ document.addEventListener('DOMContentLoaded', () => {
     initInteractiveTerminal();
     createParticles();
     initFloatingButton();
+
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Block Ctrl+U (view source)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+            e.preventDefault();
+        }
+    });
 });
 
 // Particle System
