@@ -107,6 +107,11 @@ window.addEventListener('load', () => {
 
 // Interactive Terminal
 const terminalCommands = {
+    'snake': {
+        output: ['Starting Snake game...'],
+        type: 'success',
+        action: startSnakeGame
+    },
     'help': {
         output: [
             'Available commands:',
@@ -124,6 +129,7 @@ const terminalCommands = {
             'date          - Show current date/time',
             'uptime        - Show portfolio uptime',
             'matrix        - Matrix reference',
+            'snake         - Snake game',
             'clear         - Clear terminal',
             'help          - Show this help message',
             '─────────────────────────────────────',
@@ -276,17 +282,95 @@ function processTerminalCommand(command) {
             addTerminalOutput('Terminal cleared.', 'success-output');
             return;
         }
-        
         commandData.output.forEach(output => {
             addTerminalOutput(output, commandData.type === 'success' ? 'success-output' : 'error-output');
         });
-        
         if (commandData.action) {
             commandData.action();
         }
     } else {
         addTerminalOutput(`Command not found: ${command}. Type 'help' for available commands.`, 'error-output');
     }
+}
+
+// Snake Game Implementation
+function startSnakeGame() {
+    const terminalOutput = document.getElementById('terminalOutput');
+    terminalOutput.innerHTML = '';
+    let gridWidth = 32;
+    let gridHeight = 18;
+    let snake = [{x: Math.floor(gridWidth/2), y: Math.floor(gridHeight/2)}];
+    let direction = 'right';
+    let food = {x: Math.floor(Math.random()*gridWidth), y: Math.floor(Math.random()*gridHeight)};
+    let gameOver = false;
+    let score = 0;
+
+    function drawGrid() {
+        let grid = '';
+        for (let y = 0; y < gridHeight; y++) {
+            let row = '';
+            for (let x = 0; x < gridWidth; x++) {
+                if (snake.some(s => s.x === x && s.y === y)) {
+                    row += `<span style='color:#00d4aa;background:#161b22;'>&#9608;</span>`;
+                } else if (food.x === x && food.y === y) {
+                    row += `<span style='color:#ff6b35;background:#161b22;'>X</span>`;
+                } else {
+                    row += `<span style='color:#f1f5f9;background:#161b22;'> </span>`;
+                }
+            }
+            grid += row + '<br>';
+        }
+        terminalOutput.innerHTML = `<pre style='font-size:1.1em;line-height:1.1;background:#161b22;padding:8px;border-radius:8px;'>Score: ${score}\n${grid}</pre><div style='font-size:0.9em;color:#00d4aa;'>Use arrow keys to move. ESC to quit.</div>`;
+    }
+
+    function moveSnake() {
+        if (gameOver) return;
+        let head = {...snake[0]};
+        if (direction === 'up') head.y--;
+        if (direction === 'down') head.y++;
+        if (direction === 'left') head.x--;
+        if (direction === 'right') head.x++;
+        // Wall collision
+    if (head.x < 0 || head.x >= gridWidth || head.y < 0 || head.y >= gridHeight) {
+            endGame();
+            return;
+        }
+        // Self collision
+        if (snake.some(s => s.x === head.x && s.y === head.y)) {
+            endGame();
+            return;
+        }
+        snake.unshift(head);
+        if (head.x === food.x && head.y === food.y) {
+            score++;
+            food = {x: Math.floor(Math.random()*gridWidth), y: Math.floor(Math.random()*gridHeight)};
+        } else {
+            snake.pop();
+        }
+        drawGrid();
+    }
+
+    function endGame() {
+        gameOver = true;
+        terminalOutput.innerHTML += `<div style='color:red;'>Game Over! Final Score: ${score}<br>Type 'snake' to play again.</div>`;
+        document.removeEventListener('keydown', handleKey);
+    }
+
+    function handleKey(e) {
+        if (gameOver) return;
+        if (e.key === 'ArrowUp' && direction !== 'down') direction = 'up';
+        if (e.key === 'ArrowDown' && direction !== 'up') direction = 'down';
+        if (e.key === 'ArrowLeft' && direction !== 'right') direction = 'left';
+        if (e.key === 'ArrowRight' && direction !== 'left') direction = 'right';
+        if (e.key === 'Escape') endGame();
+    }
+
+    document.addEventListener('keydown', handleKey);
+    drawGrid();
+    let interval = setInterval(() => {
+        if (!gameOver) moveSnake();
+        else clearInterval(interval);
+    }, 300);
 }
 
 function initInteractiveTerminal() {
